@@ -13,19 +13,19 @@ public class Customer {
     private Long id;
 
     private String firstName;
-    private String lastName;
+//    private String lastName;
 
-    protected Customer() {		// not public because we'll not be using it, present only for the sake of spring jpa
+    public Customer() {        // not public because we'll not be using it, present only for the sake of spring jpa
     }
 
-    public Customer(String firstName, String lastName) {
+    public Customer(String firstName/*, String lastName*/) {
         this.firstName = firstName;
-        this.lastName = lastName;
+//        this.lastName = lastName;
     }
 
     @Override
     public String toString() {
-        return String.format("Customer[id=%d, firstName='%s', lastName='%s']", id, firstName, lastName);
+        return String.format("Customer[id=%d, firstName='%s']", id, firstName/*, lastName*/);
     }
 
     public Long getId() {
@@ -36,7 +36,7 @@ public class Customer {
         return firstName;
     }
 
-    public String getLastName() {
+    /*public String getLastName() {
         return lastName;
-    }
+    }*/
 }
