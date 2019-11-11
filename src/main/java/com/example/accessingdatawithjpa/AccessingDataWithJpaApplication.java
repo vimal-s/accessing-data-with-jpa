@@ -38,13 +38,13 @@ public class AccessingDataWithJpaApplication {
             logger.info("");
 
             // retrieve by name
-            logger.info("Customers found with findByName(\"name\"):");
+            logger.info("Customers found with findByFirstName(\"name\"):");
             logger.info("-------------------------------");
             repository.findByFirstName("Dhritimitra").forEach(customer -> logger.info(customer.toString()));
             logger.info("");
 
             // retrieve by id
-            logger.info("Customer found with findById(4L):");
+            logger.info("Customer found with findById(4):");
             logger.info("--------------------------------");
             Customer customer = repository.findById(4);
             logger.info(customer.toString());
