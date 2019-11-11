@@ -4,9 +4,8 @@ This application uses Spring Data JPA to store and retrieve data in a relational
 
 The application stores `Customer` POJOs in a memory-based database.
 
-Spring Data JPA focuses on using JPA to store data in a relational database. Its most
-compelling feature is the ability to create repository implementations automatically, at
-runtime, from a repository interface.
+Spring Data JPAs most compelling feature is the ability to create repository implementations
+automatically, at runtime, from a repository interface.
 
 == Running the Application
 
@@ -15,15 +14,18 @@ When you run your application, you should see output similar to the following:
 ====
 ----
 == Customers found with findAll():
-Customer[id=1, firstName='']
-Customer[id=2, firstName='']
-Customer[id=3, firstName='']
-Customer[id=4, firstName='']
+---------------------------------
+Customer[id=1, firstName='Mahanta']
+Customer[id=2, firstName='Samnateyu']
+Customer[id=3, firstName='Dhritimitra']
+Customer[id=4, firstName='Somakirti']
 
-== Customer found with findByFirstName(''):
-Customer[id=1, firstName='']
+Customers found with findByFirstName("name"):
+--------------------------------------------
+Customer[id=3, firstName='Dhritimitra']
 
-== Customer found with findById(4):
-Customer[id=1, firstName='']
+Customer found with findById(4):
+-------------------------------
+Customer[id=4, firstName='Somakirti']
 ----
 ====
